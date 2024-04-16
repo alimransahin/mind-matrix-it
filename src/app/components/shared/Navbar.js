@@ -32,13 +32,13 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      className={`navbar bg-base-100 sticky top-0 transition duration-500 ease ${
+      className={`navbar bg-base-100 fixed transition duration-500 ease justify-between ${
         isSticky
           ? "backdrop-blur-lg bg-white/10 pt-2"
           : "shadow-none bg-transparent pt-4"
       }`}
     >
-      <div className="navbar-start">
+      <div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -75,7 +75,7 @@ const Navbar = () => {
           Mind Matrix It
         </Link>
       </div>
-      <div className="navbar-end ">
+      <div>
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {routes.map((route, index) => (
